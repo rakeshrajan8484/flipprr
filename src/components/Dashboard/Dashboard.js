@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react';
+import React from 'react';
 import './dashboard.style.scss'
 import { Switch, Route,  useLocation } from 'react-router-dom'
 import Chart from './Chart';
@@ -8,7 +8,6 @@ import AddBranch from './AddBranch';
 import BranchTransaction from './BranchTransaction';
 import BranchList from './BranchList';
 import Display from './Display';
-import { useState } from 'react';
 import BranchMaintenance from './BranchMaintenance';
 import ReloadPage from './ReloadPage';
 

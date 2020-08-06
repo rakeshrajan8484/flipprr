@@ -2,7 +2,7 @@
   "name": "flipprr",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "./",
   "proxy": "http://localhost:9000",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -13,6 +13,7 @@
     "chart.js": "^2.9.3",
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
+    "express-redirect": "^1.2.2",
     "express-session": "^1.17.1",
     "history": "^5.0.0",
     "jsforce": "^1.9.3",

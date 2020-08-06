@@ -1,13 +1,15 @@
 const express = require('express')
 var router = express.Router();
+var redirect = require("express-redirect");
 var bodyParser = require('body-parser');
 const path = require('path');
-var session = require('express-session')
+var session = require('express-session');
 const app = express();
+redirect(app);
 const port = process.env.PORT || 9000;
 app.listen(port);
 console.log('App is listening on port ' + port);
- 
+
 app.use('/', router);
 router.use(session({
     secret: 'keyboard cat',
@@ -25,10 +27,11 @@ app.get('/', function (req, res) {
 });
 
 app.post('/api/login', (req, res) => {
-     res.redirect('/#/dashboard')
+    console.log("redirect");
+    res.send({ redirect: '/#/dashboard' });;
 });
 
- 
+
 
 module.exports = router;
 

@@ -25,7 +25,19 @@ const charPoses = {
     }
 };
 class Home extends Component {
-    state = { condition: 'Login' }
+    loginCall = async (username, password) => {
+        const response = await fetch('/api/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password }),
+        });
+        const body = await response.json();
+        window.location = body.redirect
+        
+    };
+    state = { condition: 'Login', redirect:false }
     UNSAFE_componentWillMount() {
         $(document).on('show.bs.modal', '.modal', function () {
             $(this).appendTo('body');
@@ -38,7 +50,7 @@ class Home extends Component {
     render() {
         const renderContent = () => {
             if (this.state.condition === "Login") {
-                return <Login setCondition={this.setCondition} props={this.props} />;
+                return <Login setCondition={this.setCondition} props={this.props} loginCall={this.loginCall}/>;
             }
             else if (this.state.condition === "Registration") {
                 return <Registration setCondition={this.setCondition} />;
@@ -61,9 +73,7 @@ class Home extends Component {
         }
 
         return (
-            <React.Fragment>
-
-
+            <React.Fragment>    
                 <div className="modal fade" id="loginModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog modal-dialog-centered">
                         <div className="modal-content">
@@ -82,7 +92,7 @@ class Home extends Component {
                 </div>
                 <div id='parallax'>
                     <div className='d-flex justify-content-end p-5'>
-                        <button type='button' className='btn btn-outline-light' data-toggle="modal" data-target="#loginModal" onClick={this.setCondition}>Partner Portal</button>
+                        <button type='button' className='btn btn-outline-light' data-toggle="modal" data-target="#loginModal">Partner Portal</button>
                     </div>
                     <div className='row d-flex align-items-center'>
                         <div className='col-md-6 text-center my-5'>
