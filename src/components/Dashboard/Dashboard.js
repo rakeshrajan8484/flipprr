@@ -1,6 +1,6 @@
 import React from 'react';
 import './dashboard.style.scss'
-import { Switch, Route,  useLocation } from 'react-router-dom'
+import { Switch, Route, useLocation } from 'react-router-dom'
 import Chart from './Chart';
 import Header from './Header';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
@@ -10,15 +10,16 @@ import BranchList from './BranchList';
 import Display from './Display';
 import BranchMaintenance from './BranchMaintenance';
 import ReloadPage from './ReloadPage';
+import TransferFromBranch from './TransferFromBranch';
 
-const Dashboard = () => {
-    
+const Dashboard = (props) => {
+
     let location = useLocation();
     return (
         <React.Fragment>
-            <Header />
+            <Header props={props} />
 
-            <div id='dashboard' className='my-5 mx-2'>
+            <div id='dashboard' className='my-5 container-fluid'>
                 <div className='row content'>
                     <div className='col-md-8'>
                         <CSSTransitionGroup
@@ -35,15 +36,16 @@ const Dashboard = () => {
                                 <Route path='/branchTransaction' component={BranchTransaction} />
                                 <Route path='/branchMaintenance' component={BranchMaintenance} />
                                 <Route path='/reloadPage' component={ReloadPage} />
+                                <Route path='/transferFromBranch' component={TransferFromBranch} />
                             </Switch>
                         </CSSTransitionGroup>
                     </div>
-                    
+
                     <div className='col-md-4'>
                         <Chart />
                     </div>
                 </div>
-                 
+
             </div>
         </React.Fragment>
     );

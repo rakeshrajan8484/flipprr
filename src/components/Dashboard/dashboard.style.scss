@@ -72,7 +72,13 @@
     
 }
 }
-
+#signout{
+    background-color: transparent;
+    border:0;
+}
+#signout:focus{
+    outline:0;
+}
 @media only screen and (max-width:768px){
     #dashboard{
         flex-direction: column;

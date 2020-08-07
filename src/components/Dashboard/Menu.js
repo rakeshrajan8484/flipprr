@@ -12,7 +12,7 @@ function Menu() {
                 <Link to='/branchList' onClick={closeMenu}><li>Branch Maintenance</li></Link>
                 <Link to='/reloadPage' onClick={closeMenu}><li>Reload Branch(s)</li></Link>
                 <Link to='/branchTransaction' onClick={closeMenu}><li>View Branch Transactions</li></Link>
-                <Link to='/' onClick={closeMenu}><li>Transfer from Branch to HeadOffice</li></Link>
+                <Link to='/transferFromBranch' onClick={closeMenu}><li>Transfer from Branch to HeadOffice</li></Link>
             </ul>
             {/* <button onClick={closeMenu}>
                 <svg
