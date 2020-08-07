@@ -7,20 +7,26 @@ class Registration extends Component {
 
             <form>
                 <div className="form-group">
-                    <input type="text" className="form-control" id="NameOfEntity" placeholder='Name of Entity' required />
+                    <input type="text" className="form-control" id="NameOfEntity" required />
+                    <label>Name of Entity</label>
                 </div>
                 <div className="form-group">
-                    <input type="text" className="form-control" id="Supervisor" placeholder='Supervisor' required />
+                    <input type="text" className="form-control" id="Supervisor" required />
+                    <label>Supervisor</label>
                 </div>
                 <div className="form-group">
-                    <textarea type="text" className="form-control" id="RegisteredAddress" rows="3" placeholder='Full Registered Address' required />
+                    <textarea type="text" className="form-control" id="RegisteredAddress" rows="2" required />
+                    <label>Full Registered Address</label>
                 </div>
                 <div className="form-group">
-                    <input type="email" className="form-control" id="AuthorizerEmail" placeholder='Transaction Authorizer Email' required />
-                    <small id="emailHelp" className="form-text text-muted">This email will be used to send the One Time Authorization code for any financial transaction</small>
+                    <input type="email" className="form-control" id="AuthorizerEmail" required />
+                    <label>Transaction Authorizer Email</label>
+                    
                 </div>
+                <small id="emailHelp" className="form-text text-muted">This email will be used to send the One Time Authorization code for any financial transaction</small>
                 <div className="form-group">
-                    <input type="text" className="form-control" id="ContactMobile" placeholder='Contact Mobile' required />
+                    <input type="text" className="form-control" id="ContactMobile" required />
+                    <label>Contact Mobile</label>
                 </div>
                 <div className="custom-control custom-checkbox">
                     <input type="checkbox" className="custom-control-input" id="customCheck1" />
