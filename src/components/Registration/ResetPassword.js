@@ -12,12 +12,10 @@ class ResetPassword extends Component {
 
             <form>
                 <div className="form-group">
-                    <input type="text" className="form-control" id="UserName"  required />
-                    <label>User Name</label>
+                    <input type="text" className="form-control" id="UserName" placeholder='User Name' required />
                 </div>
                 <div className="form-group">
-                    <input type="text" className="form-control" id="AuthorizationCode" required />
-                    <label>Authorization Code</label>
+                    <input type="text" className="form-control" id="AuthorizationCode" placeholder='Authorization Code' required />
                 </div>
 
                 <div className="form-group text-center mt-5">
@@ -25,12 +23,10 @@ class ResetPassword extends Component {
                 </div>
                 {this.state.AuthorizationCode !== "" ? <div id='changePassword' className='my-5' >
                     <div className="form-group">
-                        <input type="password" className="form-control" id="NewPassword" required />
-                        <label>Enter New Password</label>
+                        <input type="password" className="form-control" id="NewPassword" placeholder='Enter New Password' required />
                     </div>
                     <div className="form-group">
-                        <input type="password" className="form-control" id="ConfirmPassword" required />
-                        <label>Reenter New Password</label>
+                        <input type="password" className="form-control" id="ConfirmPassword" placeholder='Reenter New Password' required />
                     </div>
                     <div className="form-group text-center mt-5">
                         <button onClick={() => this.props.setCondition("ThankYou")} className='btn btn-outline-primary'>submit</button>

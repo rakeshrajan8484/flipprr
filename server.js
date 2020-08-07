@@ -27,13 +27,9 @@ app.get('/', function (req, res) {
 });
 
 app.post('/api/login', (req, res) => {
-    console.log("redirect")
-    res.send({ redirect: '/?#/dashboard' });
+    console.log("redirect");
+    res.send({ redirect: '/#/dashboard' });;
 });
-
-app.get('/api/logout', (req, res) => {
-    res.send({redirect: '/#/'})
-})
 
 
 

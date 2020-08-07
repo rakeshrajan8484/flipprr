@@ -28,7 +28,7 @@ const chart2 = {
 class Chart extends Component {
     render() {
         return (
-            <div className='p-3 bg-light'>
+            <React.Fragment>
                     <Bar
                         data={chart1}
                         options={{
@@ -58,7 +58,7 @@ class Chart extends Component {
                             }
                         }}
                     />
-            </div>
+            </React.Fragment>
         );
     }
 }

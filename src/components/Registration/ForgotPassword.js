@@ -7,8 +7,7 @@ const ForgotPassword = (props) => {
 
         <form>
             <div className="form-group">
-                <input type="text" className="form-control" id="UserName" required />
-                <label>User Name</label>
+                <input type="text" className="form-control" id="UserName" placeholder='User Name' required />
             </div>
 
 
